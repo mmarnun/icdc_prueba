@@ -29,6 +29,13 @@ pipeline {
                         }
                     }
                 }
+                stage('RemoveImage') {
+                    steps {
+                        sh "docker rmi $IMAGEN:latest"
+                    }
+                }
+            }
+        }
         stage('ConexionSSH') {
             agent any
             steps {
