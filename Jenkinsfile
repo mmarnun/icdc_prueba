@@ -51,7 +51,7 @@ pipeline {
     post {
         always {
             mail to: 'alejandromanuelmartin03@gmail.com',
-            subject: "Imagen creada!",
+            subject: "Imagen creada!!",
             body: "Imagen: $IMAGEN"
         }
     }
