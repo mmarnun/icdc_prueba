@@ -4,6 +4,7 @@ pipeline {
         USUARIO = 'USER_DOCKERHUB'
     }
     agent none
+    stages {
         stage("BuildImagenDocker") {
             agent any
             stages {
