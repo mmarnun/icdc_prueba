@@ -3,7 +3,7 @@ version: '3.1'
 services:
   app:
     container_name: prueba-app
-    image: mmarnun/prueba:7
+    image: mmarnun/prueba:latest
     restart: always
     environment:
       DB_HOST: prueba-db

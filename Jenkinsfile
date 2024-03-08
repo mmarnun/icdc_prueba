@@ -16,7 +16,7 @@ pipeline {
                 stage('BuildImagen') {
                     steps {
                         script {
-                            newApp = docker.build "$IMAGEN:$BUILD_NUMBER"
+                            newApp = docker.build "$IMAGEN:latest"
                         }
                     }
                 }
@@ -52,7 +52,7 @@ pipeline {
         always {
             mail to: 'alejandromanuelmartin03@gmail.com',
             subject: "Imagen creada!",
-            body: "Imagen: $IMAGEN:$BUILD_NUMBER"
+            body: "Imagen: $IMAGEN"
         }
     }
 }
